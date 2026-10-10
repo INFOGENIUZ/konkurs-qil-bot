@@ -1,11 +1,38 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from .cancel_action import bt_admin_cancel_action
 
-bt_owner_active_gives = InlineKeyboardButton('🚀 Faol konkurslar', callback_data='owner_active_gives', style='success')
-kb_owner_menu = InlineKeyboardMarkup().add(bt_owner_active_gives)
+# Asosiy egasi (Owner) paneli
+kb_owner_panel = InlineKeyboardMarkup(row_width=2).add(
+    InlineKeyboardButton('📊 Global statistika', callback_data='owner_stats'),
+    InlineKeyboardButton('📢 Xabar tarqatish', callback_data='owner_broadcast'),
+).add(
+    InlineKeyboardButton('🔐 Majburiy obuna (OP)', callback_data='owner_mandatory'),
+    InlineKeyboardButton('🌐 Barcha konkurslar', callback_data='owner_all_contests'),
+).add(
+    InlineKeyboardButton('💾 Zaxira nusxa (Backup)', callback_data='owner_backup')
+).add(
+    InlineKeyboardButton('🔙 Asosiy menyu', callback_data='owner_back_to_main')
+)
 
-bt_owner_change_winners = InlineKeyboardButton('🎯 G‘oliblarni o‘zgartirish', callback_data='owner_change_winners', style='primary')
-bt_owner_statistic = InlineKeyboardButton('📊 Statistika', callback_data='owner_show_statistic', style='primary')
-kb_owner_manage_gives = InlineKeyboardMarkup().add(bt_owner_change_winners).add(bt_owner_statistic).add(
-    bt_admin_cancel_action
+# Rassilka tugmasi uchun
+kb_broadcast_buttons_opt = InlineKeyboardMarkup().add(
+    InlineKeyboardButton('➕ Tugma qo‘shish', callback_data='broad_add_btn'),
+    InlineKeyboardButton('⏩ Tugmasiz davom etish', callback_data='broad_skip_btn')
+).add(
+    InlineKeyboardButton('🔙 Bekor qilish', callback_data='broad_cancel')
+)
+
+# Rassilka tasdiqlash
+kb_broadcast_confirm = InlineKeyboardMarkup().add(
+    InlineKeyboardButton('🚀 Tarqatishni boshlash', callback_data='broad_confirm_send')
+).add(
+    InlineKeyboardButton('🔙 Bekor qilish', callback_data='broad_cancel')
+)
+
+# Majburiy obuna boshqaruvi
+kb_mandatory_menu = InlineKeyboardMarkup().add(
+    InlineKeyboardButton('➕ Homiy kanal qo‘shish', callback_data='mand_add')
+).add(
+    InlineKeyboardButton('📋 Ulangan homiy kanallar', callback_data='mand_list')
+).add(
+    InlineKeyboardButton('🔙 Orqaga', callback_data='owner_back_to_panel')
 )
