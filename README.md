@@ -1,76 +1,186 @@
+# 🎉 Konkurs Qil BOT
 
-# GiveawayBot
+**Konkurs Qil BOT** — Telegram kanallari va guruhlarida turli tanlovlar hamda sovrinli o‘yinlarni tashkil etish, ishtirokchilarni yig‘ish va g‘oliblarni adolatli tanlash uchun mo‘ljallangan Telegram bot.
 
-## Основной функционал:
+## ✨ Asosiy imkoniyatlar
 
-- Создание розыгрыша: бот может создавать розыгрыши с различными параметрами, такими как количество победителей, продолжительность розыгрыша, тип розыгрыша, текст для розыгрыша, добавление капчи и фото/видео. 
+### 🎁 1. Tanlov yaratish
 
-    [![2023-05-21-183002.png](https://i.postimg.cc/TPNx7QsV/2023-05-21-183002.png)](https://postimg.cc/f3d1k7Dy)
-    
-- Участие в розыгрыше: пользователи могут участвовать в розыгрыше, отправляя сообщение с указанием ключевого слова в комментарии к посту с розыгрышем или нажимая на кнопку. 
+Bot orqali turli parametrlar asosida tanlovlar yaratish mumkin:
 
-    [![2023-05-21-183546.png](https://i.postimg.cc/WzGbHggs/2023-05-21-183546.png)](https://postimg.cc/4H3gKKW0) 
-    
-    [![2023-05-21-183520.png](https://i.postimg.cc/yx48jvJf/2023-05-21-183520.png)](https://postimg.cc/PpyHrbQZ)
+- G‘oliblar sonini belgilash.
+- Tanlovning tugash sanasi va vaqtini belgilash.
+- Tanlov turini tanlash.
+- Tanlov uchun matn yozish.
+- Rasm yoki video qo‘shish.
+- CAPTCHA orqali botlardan himoyalash.
+- Tanlovni kerakli parametrlar asosida sozlash.
 
-- Выбор победителей: импрессивная анимация при подведении итогов, позволяющая проводить розыгрыши в прямом эфире и подтверждать их честность, чтобы участники были уверены.
+![Tanlov yaratish](https://i.postimg.cc/TPNx7QsV/2023-05-21-183002.png)
 
-    [![2023-05-21-183729.png](https://i.postimg.cc/2y8XsfB3/2023-05-21-183729.png)](https://postimg.cc/wyZVNZ2d)
+### 👥 2. Tanlovda ishtirok etish
 
-    [![2023-05-21-183833.png](https://i.postimg.cc/dQ4f8DzC/2023-05-21-183833.png)](https://postimg.cc/yW3nK666)
+Foydalanuvchilar tanlovda ikki xil usulda qatnashishlari mumkin:
 
-- Оповещение: оповещения для пользователей, предупреждающие об окончании конкурса, чтобы они могли поспешить принять участие.
+- **Tugma orqali:** foydalanuvchi maxsus tugmani bosib tanlovda ishtirok etadi.
+- **Izohlar orqali:** foydalanuvchi tanlov postiga izoh sifatida belgilangan kalit so‘zni yozadi.
 
-- Публикация результатов: в каждом посте с итогами конкурса имеется ссылка "проверить результаты", ведущая в бота, где можно узнать список победителей и другую полезную информацию о конкурсе.
+![Tanlovda qatnashish](https://i.postimg.cc/WzGbHggs/2023-05-21-183546.png)
 
-    [![2023-05-21-183950.png](https://i.postimg.cc/D08PQfXQ/2023-05-21-183950.png)](https://postimg.cc/FkXSN4G1)
+![Ishtirok etish tugmasi](https://i.postimg.cc/yx48jvJf/2023-05-21-183520.png)
 
-- Проверка подлинности участников: розыгрыш с типом "по кнопке" имеет возможность включить капчу (защита от ботов) при создании розыгрыша.
+### 🏆 3. G‘oliblarni aniqlash
 
-- Каналы для розыгрышей: после добавления каналов, они автоматически будут использоваться для всех розыгрышей. В случае розыгрыша "по комментариям" к каналу нужно будет добавить группу.
+Tanlov yakunlangach, bot belgilangan miqdordagi g‘oliblarni tanlaydi.
 
-    [![2023-05-25-165444.png](https://i.postimg.cc/wM19NC6F/2023-05-25-165444.png)](https://postimg.cc/8fV8Qnfr)
+- G‘oliblarni aniqlash jarayonida ta’sirchan animatsiya namoyish etiladi.
+- Tanlov natijalarini jonli efirda ko‘rsatish mumkin.
+- G‘oliblarni tanlash jarayoni ishtirokchilar uchun shaffof tarzda namoyish etiladi.
 
-    [![2023-05-25-165506.png](https://i.postimg.cc/QCk4mbjP/2023-05-25-165506.png)](https://postimg.cc/hQv1PVzb)
+![G‘oliblarni aniqlash](https://i.postimg.cc/2y8XsfB3/2023-05-21-183729.png)
 
-- Редактирование: возможность редактирования даты завершения гива, чтобы гибко управлять его продолжительностью.
+![Tanlov natijalari](https://i.postimg.cc/dQ4f8DzC/2023-05-21-183833.png)
 
-    [![2023-05-25-182535.png](https://i.postimg.cc/Cdp0BJmQ/2023-05-25-182535.png)](https://postimg.cc/T50FBj8V)
+### 🔔 4. Eslatmalar va bildirishnomalar
 
-- Ошибки: в случае возникновения непредвиденных ошибок, бот автоматически отправит детали владельцам, которые указанные в конфиге.
+- Foydalanuvchilarni tanlov yakunlanishi haqida ogohlantirish.
+- Ishtirokchilarga tanlovda qatnashishga ulgurishlari uchun eslatmalar yuborish.
 
-    [![2023-05-25-194722.png](https://i.postimg.cc/Nf6TGk7y/2023-05-25-194722.png)](https://postimg.cc/QHMV05zs)
+### 📊 5. Natijalarni e’lon qilish
 
-## Установка
+Tanlov yakunlangach, g‘oliblar ro‘yxati e’lon qilinadi.
 
-``` Для корректной работы требуется python версии 3.10 - 3.11 ```
+- Natijalar uchun alohida post joylashtiriladi.
+- Postda **“Natijalarni tekshirish”** havolasi bo‘ladi.
+- Ushbu havola orqali foydalanuvchilar botga o‘tib, g‘oliblar ro‘yxati va tanlov haqidagi boshqa ma’lumotlarni ko‘rishlari mumkin.
 
-Config (path - config/py_config.py):
+![Tanlov natijalarini tekshirish](https://i.postimg.cc/D08PQfXQ/2023-05-21-183950.png)
+
+### 🛡️ 6. Ishtirokchilarni tekshirish
+
+Tugma orqali tashkil etiladigan tanlovlarda CAPTCHA himoyasini yoqish mumkin.
+
+Bu imkoniyat avtomatik botlar ishtirokini kamaytirishga va haqiqiy foydalanuvchilarni tekshirishga yordam beradi.
+
+### 📢 7. Tanlov kanallarini sozlash
+
+Botga tanlovlar o‘tkaziladigan kanallarni qo‘shish mumkin.
+
+- Qo‘shilgan kanallardan keyingi tanlovlarda foydalanish mumkin.
+- Izohlar orqali tanlov o‘tkazish uchun kanalga tegishli guruh ham sozlanishi kerak.
+- Kanal va guruh sozlamalari orqali tanlovlarni boshqarish mumkin.
+
+![Kanal sozlamalari](https://i.postimg.cc/wM19NC6F/2023-05-25-165444.png)
+
+![Kanalni sozlash](https://i.postimg.cc/QCk4mbjP/2023-05-25-165506.png)
+
+### ✏️ 8. Tanlovni tahrirlash
+
+Tanlov davomiyligini o‘zgartirish imkoniyati mavjud.
+
+- Tanlov tugash sanasini o‘zgartirish.
+- Tanlov muddatini uzaytirish yoki qisqartirish.
+
+![Tanlov muddatini tahrirlash](https://i.postimg.cc/Cdp0BJmQ/2023-05-25-182535.png)
+
+### ⚠️ 9. Xatoliklar haqida xabar berish
+
+Kutilmagan xatolik yuz berganda, bot xatolik tafsilotlarini konfiguratsiyada ko‘rsatilgan bot egalari yoki administratorlariga yuboradi.
+
+Bu muammolarni aniqlash va bartaraf etishni osonlashtiradi.
+
+![Xatolik haqida xabar](https://i.postimg.cc/Nf6TGk7y/2023-05-25-194722.png)
+
+---
+
+## ⚙️ O‘rnatish
+
+### 📌 Talablar
+
+Botning to‘g‘ri ishlashi uchun quyidagilar talab etiladi:
+
+- **Python:** 3.10–3.11
+- **Ma’lumotlar bazasi:** PostgreSQL
+- **Telegram bot tokeni:** BotFather orqali olingan token
+
+### 1. Loyihani yuklab olish
+
+GitHub repository manzilingizni quyidagi buyruqqa kiriting:
+
 ```bash
-  OWNERS = [] # список ID
-  bot_token = '' 
-  database_url = '' # пример: postgres://postgres:jammer@localhost:5432/postgres
-  timezone_info = pytz.timezone('Europe/Moscow')
-  start_text = 'Главное меню: '
-  text_for_participation_in_comments_giveaways = 'Участвую'
-
+git clone REPOSITORY_MANZILI
 ```
 
-Установка зависимостей:
+Loyiha papkasiga o‘ting:
+
 ```bash
-  pip install -r requirements.txt
+cd loyiha-papkasi
 ```
-    
-Запуск:
+
+### 2. Konfiguratsiyani sozlash
+
+`config/py_config.py` faylini oching va kerakli qiymatlarni kiriting:
+
+```python
+OWNERS = []  # Bot egalari Telegram ID raqamlari
+
+bot_token = ''  # Telegram bot tokeni
+
+database_url = ''  # PostgreSQL ma'lumotlar bazasi manzili
+# Misol: postgresql://postgres:parol@localhost:5432/postgres
+
+timezone_info = pytz.timezone('Asia/Tashkent')
+
+start_text = 'Asosiy menyu: '
+
+text_for_participation_in_comments_giveaways = 'Qatnashaman'
+```
+
+**Eslatma:** `OWNERS` ro‘yxatiga bot egalarining Telegram ID raqamlarini kiriting. `bot_token` maydoniga haqiqiy bot tokenini, `database_url` maydoniga esa PostgreSQL ulanish manzilini yozing. Tokenni ochiq GitHub repository’ga joylashtirmang.
+
+### 3. Kerakli kutubxonalarni o‘rnatish
+
+Terminalda quyidagi buyruqni bajaring:
+
 ```bash
-  python app.py
+pip install -r requirements.txt
 ```
-## Support
 
-TG - https://t.me/Jaammerr
+### 4. Botni ishga tushirish
 
-Email - andlolkek@gmail.com
+Barcha sozlamalar tayyor bo‘lgach, botni quyidagi buyruq bilan ishga tushiring:
 
-``` Пожалуйста, обращайтесь только в случае возникновения неизвестных багов или ошибок, все остальные просьбы будут проигнорированы.```
+```bash
+python app.py
+```
 
+Agar konfiguratsiya va ma’lumotlar bazasi to‘g‘ri sozlangan bo‘lsa, bot ishga tushadi.
 
+---
+
+## 🗄️ Ma’lumotlar bazasi
+
+Loyiha PostgreSQL ma’lumotlar bazasidan foydalanadi.
+
+Ma’lumotlar bazasi manzili `config/py_config.py` faylidagi `database_url` parametrida belgilanadi.
+
+Misol:
+
+```text
+postgresql://postgres:parol@localhost:5432/postgres
+```
+
+`parol` qiymatini o‘zingizning PostgreSQL parolingizga almashtiring.
+
+## 🤝 Qo‘llab-quvvatlash
+
+Loyiha bo‘yicha xatoliklar yoki texnik muammolar yuzaga kelsa, quyidagi manzillardan foydalanishingiz mumkin:
+
+- **Telegram:** https://t.me/developer_muxa
+- **Elektron pochta:** muxiddin980001@gmail.com
+
+Iltimos, ushbu manzillarga faqat noma’lum xatoliklar yoki texnik muammolar yuzasidan murojaat qiling.
+
+---
+
+**Konkurs Qil BOT** — Telegram tanlovlarini yaratish, boshqarish va g‘oliblarni aniqlash uchun qulay yechim. 🎉
