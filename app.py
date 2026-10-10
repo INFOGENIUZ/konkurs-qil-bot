@@ -1,5 +1,15 @@
 import os
 import asyncio
+
+# Python 3.10+ / 3.12+ / 3.14+ (Render Linux) uchun event loop sozlamasi
+try:
+    loop = asyncio.get_event_loop()
+    if loop.is_closed():
+        raise RuntimeError
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
 from aiohttp import web, ClientSession
 
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
@@ -13,13 +23,15 @@ from database import initialize_database
 
 bot = Bot(
     token=bot_token,
-    parse_mode=ParseMode.HTML
+    parse_mode=ParseMode.HTML,
+    loop=loop
 )
 
 storage = MemoryStorage()
 dp = Dispatcher(
     bot,
-    storage=storage
+    storage=storage,
+    loop=loop
 )
 
 
@@ -96,6 +108,7 @@ if __name__ == '__main__':
 
     executor.start_polling(
         dp,
+        loop=loop,
         skip_updates=True,
         on_startup=on_startup,
         on_shutdown=on_shutdown
